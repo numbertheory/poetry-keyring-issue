@@ -8,3 +8,6 @@ RUN pip3 install poetry==1.0.0
 WORKDIR /opt/app
 
 COPY pyproject.toml /opt/app/pyproject.toml
+COPY poetry.lock /opt/app/poetry.lock
+
+RUN poetry install
